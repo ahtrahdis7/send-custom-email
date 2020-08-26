@@ -1,0 +1,40 @@
+<!DOCTYPE html> 
+<html> 
+
+<head> 
+    <link href="https://cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet"> 
+    <style>
+        #editor-div{
+            height: 600px;
+            width: 80%;
+            margin-right: 10%;
+            margin-left: 10%;
+            margin-bottom: 10%;
+            margin-top: 10%;
+            font-size: 30px;
+        }
+        
+    </style>
+	<title>Editor</title> 
+</head> 
+
+<body> 
+
+
+    <div id="editor-div">
+        <div id="editor">
+            <p>Hello World!</p>
+        </div>
+    </div>
+    <script src="https://cdn.quilljs.com/1.0.0/quill.js"></script>
+ 
+    <!-- Initialize Quill editor -->
+    <script>
+        var editor = new Quill('#editor', {
+            modules: { toolbar: '#toolbar' },
+            theme: 'snow'
+        });
+    </script> 
+</body> 
+
+</html>
