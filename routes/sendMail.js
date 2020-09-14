@@ -3,14 +3,6 @@ var router = express.Router();
 var nodemailer = require("nodemailer");
 const config = require('../config');
 
-var smtpTransport = nodemailer.createTransport({
-
-    service: "Gmail",
-    auth: {
-        user: req.body.senderEmail,
-        pass: req.body.password,
-    }
-});
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('editor', { title: 'HTML EDITOR' });
@@ -18,6 +10,16 @@ router.get('/', function(req, res, next) {
 
 router.post('/', async (req, res) => {
     console.log(req.body)
+    
+    var smtpTransport = nodemailer.createTransport({
+
+        service: "Gmail",
+        auth: {
+            user: req.body.senderEmail,
+            pass: req.body.password,
+        }
+    });
+
     var mailOptions = {
         from:`${req.body.senderEmail}`,
         to : `${req.body.recerverEmail}`,
