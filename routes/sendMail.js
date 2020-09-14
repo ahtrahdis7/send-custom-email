@@ -21,24 +21,18 @@ router.post('/', async (req, res) => {
     var mailOptions = {
         from:`${config.MAIL_ID}`,
         to : `${req.body.email}`,
-        subject : `From Your Dearest`,
+        subject : `WORK TO BE DONE`,
         html: `<div style="font-family: monospace;" >
                 <h2 >
                     use this OTP to verify your MarketGad account.<br>
                 </h2>
                 <div style="padding: 10px;background-color: rgb(235, 255, 255); font-size: 25px ">
                         <p>
-                            You're my <b>honeybunch</b>, <i>sugar plum</i>, pumpy-umpy-umpkin
-                            <span style="color: blue">You're my <strong>sweetie pie</strong></span>
-                            You're my <span style="color: green">cuppycake, gumdrop, snoogums-boogums</span>
-                            You're the <span style="color: red">apple of my eye</span>
+                           This the email verification code written by sidhartha mallick
                         </p>
                         <img src="https://images.unsplash.com/photo-1494403687614-8ca3e13f154f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1275&q=80" />
                         <p>
-                            And I love you so and I want you to know
-                            That I'll always be right here
-                            And I love to sing sweet songs to you
-                            Because you are so dear
+                            This is an email verification written by sidhartha mallick
                         </p>
                 </div>
             </div>`,
