@@ -55,12 +55,12 @@ label {
 
 .container {
   width: 700px;
-  height: 750px;
+  padding: 30px;
   margin:0 auto;
   text-align: center;
   overflow-y: auto;
   color: solid black;
-  border:10px solid black;
+  border:5px solid black;
   border-radius: 10px;
   background-color: #1f1f14;
 }
@@ -72,6 +72,7 @@ label {
   margin-bottom: 10%;
   margin-top: 5%;
   font-size: 30px;
+  background-color: white;
   }
 
   .ql-toolbar.ql-snow{
@@ -84,38 +85,27 @@ label {
 <h3 style="text-align: center; color: white">CUSTOM EMAIL FORM</h3>
 
 <div class="container">
-  <form action="/action_page.php">
+  <form action="/sendMail" method="POST">
     <label for="fname" style="color: white"><b>Sender email<b></label>
-    <input type="text" id="fname" name="firstname" placeholder="Your email in the format @gmail.com">
+    <input type="text" id="fname" name="senderEmail" placeholder="Your email in the format @gmail.com">
     <label for="lname" style="color: white"><b>Sender password<b></label><br>
-    <input type="password" id="lname" name="lastname" placeholder="Your password"><br>
+    <input type="password" id="lname" name="password" placeholder="Your password"><br>
     <label for="lname" style="color: white"><b>Receiver email<b></label>
-    <input type="text" id="lname" name="lastname" placeholder="Receiver email in the format @gmail.com ">
+    <input type="text" id="lname" name="recerverEmail" placeholder="Receiver email in the format @gmail.com ">
      <label for="subject" style="color: white"><b>Subject<b></label>
     <input type="text" name="subject" placeholder="Write the subject for the mail" ></input>
 
     <!--<label for="subject" style="color: white"><b>Body<b></label>
     <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>-->
     <label for="subject" style="color: white"><b>Body<b></label>
-    <div id="htmleditor" class="tabcontent">
-            <link href="https://cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet"> 
-            <div id="editor-div">
-                <div id="editor">
-                   Your mail goes here...
-                </div>
-            </div>
-            <script src="https://cdn.quilljs.com/1.0.0/quill.js"></script>
+    <input type="text" style="height: 4cm;" name="body" >
 
-            <script>
-                var editor = new Quill('#editor', {
-                    theme: 'snow'
-                });
-            </script> 
-        </div>
-
-    <input  type="submit" value="Submit">
+    <input  type="submit" value="Submit" onclick="PostRequest()">
   </form>
 </div>
+<script>
+
+</script>
 
 </body>
 </html>
