@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
 
 router.post('/', async (req, res) => {
     console.log(req.body)
-    
+
     var smtpTransport = nodemailer.createTransport({
 
         service: "Gmail",
@@ -31,6 +31,8 @@ router.post('/', async (req, res) => {
         if(error){
             console.log("ERROR");
             console.log(error);
+            res.statusCode = 404;
+            res.render('editor', { title: 'HTML EDITOR' });
         }else{
             console.log(response);
             // console.log("Message sent: " + response);
