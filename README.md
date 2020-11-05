@@ -13,3 +13,6 @@ Send custom Email using HTML and CSS
     
 5. npm start 
 </pre>
+
+
+<img src="https://visitor-badge.glitch.me/badge?page_id=ahtrahdis7.send-custom-email" height="25px" vertical-align="center" >
